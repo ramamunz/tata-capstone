@@ -47,7 +47,7 @@
       <div class="modal-content">
         <h2>Ganti Alamat</h2>
         <hr>
-        <form action="https://your-new-action-url.com" method="post">
+        <form action="" method="post">
           <div class="form-group">
             <label for="alamat">Alamat:</label>
             <input type="text" id="alamat" name="alamat" required>
@@ -97,9 +97,30 @@
       <div class="section-title">Payment Method</div>
       <div class="section-content">
         <div class="metode-wrapper">
-          <a href="#" class="btn-change">COD</a>
-          <a href="#" class="btn-change">Transfer Bank</a>
+          <a href="#"><button class="button-cod" id="button-cod">Cash On Delivery (COD)</button></a>
+          <a href="#"><button class="button-transfer" id="button-transfer">Transfer Bank <br>
+              Nomor Virtual Account : 112233445566
+            </button></a>
         </div>
+
+        <div id="modalTransfer" class="modalTransfer">
+          <div class="modalTransfer-content">
+            <h2>Bukti Pembayaran</h2>
+            <hr>
+            <br>
+            <div class="upload-container">
+              <input type="file" id="fileInput" class="file-input">
+              <label for="fileInput" class="file-label">
+                Choose a file
+              </label>
+              <img src="" alt="Uploaded Image" id="previewImage" class="preview-image">
+            </div>
+            <br>
+            <br>
+            <button id="closeTransferBtn">Close</button>
+          </div>
+        </div>
+
         <div class="order-wrapper">
           <div class="total-pembayaran">
             Total Pembayaran: <span>Rp. 100.000</span>
@@ -111,6 +132,7 @@
   </div>
 
   <script src="js/checkout.js"></script>
+
 </body>
 
 </html>
